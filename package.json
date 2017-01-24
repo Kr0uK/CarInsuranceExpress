@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Assurance Voiture",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "node bin\/www"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
