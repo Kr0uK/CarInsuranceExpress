@@ -20,6 +20,7 @@
     "url": "git+https://Kr0uK@github.com/Kr0uK/CarInsuranceExpress.git"
   },
   "author": "Kr0uK",
+  "license" : "ISC",
   "bugs": {
     "url": "https://github.com/Kr0uK/CarInsuranceExpress/issues"
   },
