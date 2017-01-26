@@ -16,9 +16,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app.use(require('./routes'));
 app.use(require('./routes/controller'));
-//require('./routes/controller');
 app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());

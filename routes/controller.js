@@ -16,16 +16,13 @@ router.route('/login').get(function (req, res, next) {
     console.log(req.method, req.url);
     res.render('login');
     next();
-});
-        
-        /*
-          })
+})
         .post(function (req, res, next) {
             console.log('On rentre dans le post du login');
             console.log(req.method, req.url);
             res.render('home_user');
             next();
-         */
+        });
 
 router.route('/new_user').get(function (req, res, next) {
     console.log('On rentre dans la route newUser');
