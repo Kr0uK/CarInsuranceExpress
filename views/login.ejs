@@ -17,26 +17,23 @@ and open the template in the editor.
         <link rel="stylesheet" href="./stylesheets/bootstrap.css" type="text/css">
         <link rel="stylesheet" href="./stylesheets/bootstrap-responsive.css" type="text/css"/>
         <link rel="stylesheet" href="./stylesheets/bootstrap.css" type="text/css">
-        <script src="./javascripts/login.js"></script>
         <script src="./javascripts/forge.bundle.js" ></script>
     </head>
     <body>
         <div>Connexion</div> <div class="container">
             <div class="jumbotron">
-                <form id="form" class="form-horizontal">
+                <form id="form" class="form-horizontal" method="post" >
                     <div class="form-group"><label for="inputText" class="col-lg-2 control-label">Identifiant</label>
                         <div class="col-lg-10">                                
-                            <input id="login" class="form-control" type="text" name="id" value="" placeholder="Identifiant" />
+                            <input id="inputLogin" class="form-control" type="text" name="id" value="" placeholder="Identifiant" />
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                         <div class="col-lg-10">
                             <input id="pwd" class="form-control" type="password" name="password" placeholder="Password" value="" />
                         </div>
                     </div>
-
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
                             <input type="submit" class="btn btn-primary" value="Valider" />
@@ -45,10 +42,9 @@ and open the template in the editor.
                 </form>
             </div>
         </div>   
-
-        <script charset="UTF-8" src="../js/bootstrap.min.js" ></script>
-        <script charset= "UTF-8" src="../js/jquery-ui.js" ></script>
-        <script charset="UTF-8" src="../js/datepicker-fr.js"></script>
-        <script charset="UTF-8" src="../js/tools.js"></script>
+        <script charset="UTF-8" src="./js/bootstrap.min.js" ></script>
+        <script charset= "UTF-8" src="./js/jquery-ui.js" ></script>
+        <script charset="UTF-8" src="./js/datepicker-fr.js"></script>
+        <script charset="UTF-8" src="./js/tools.js"></script>
     </body>
 </html>

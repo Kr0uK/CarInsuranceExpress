@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var bodyParser = require('body-parser');
 
 console.log('On rentre dans le controller');
-router.route('/').get(function (req, res, next) {
+router.route('/').get(function(req, res, next) {
     console.log('On rentre dans la route home');
     console.log(req.method, req.url);
     res.render('index');
@@ -11,20 +10,24 @@ router.route('/').get(function (req, res, next) {
 });
 
 
-router.route('/login').get(function (req, res, next) {
+router.route('/login').get(function(req, res, next) {
     console.log('On rentre dans la route login');
     console.log(req.method, req.url);
     res.render('login');
     next();
-})
-        .post(function (req, res, next) {
-            console.log('On rentre dans le post du login');
-            console.log(req.method, req.url);
-            res.render('home_user');
-            next();
-        });
+});
 
-router.route('/new_user').get(function (req, res, next) {
+router.route('/login').post(function(req, res, next) {
+    console.log('On rentre dans le post du login');
+    console.log(req.method, req.url);
+    var login = req.body.inputLogin;
+    var pwd = req.body.inputPassword;
+    console.log("Login : " + login + " Mdp : " + pwd);
+    res.render('home_user');
+    next();
+});
+
+router.route('/new_user').get(function(req, res, next) {
     console.log('On rentre dans la route newUser');
     console.log(req.method, req.url);
     res.render('new_user');
@@ -34,7 +37,7 @@ router.route('/new_user').get(function (req, res, next) {
 
 
 
-router.route('/home_user').get(function (req, res, next) {
+router.route('/home_user').get(function(req, res, next) {
     console.log('On rentre dans la route homeuser');
     console.log(req.method, req.url);
     res.render('home_user');
@@ -42,7 +45,7 @@ router.route('/home_user').get(function (req, res, next) {
 });
 
 // catch 404 and forward to error handler
-router.use(function (req, res, next) {
+router.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     console.log(err.message);
@@ -51,7 +54,7 @@ router.use(function (req, res, next) {
 
 
 // error handler
-router.use(function (err, req, res, next) {
+router.use(function(err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
